@@ -12,3 +12,4 @@ output/
 Thumbs.db
 .DS_Store
 .vscode/
+.output/
