@@ -1,0 +1,14 @@
+# Ignore compiled executables
+*.exe
+
+# Ignore common object/build files
+*.o
+*.obj
+
+# Ignore output folders used in this repo
+output/
+
+# Ignore OS and editor files
+Thumbs.db
+.DS_Store
+.vscode/
