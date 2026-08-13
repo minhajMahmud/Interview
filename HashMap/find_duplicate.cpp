@@ -15,9 +15,9 @@ for(int i=0;i<n;i++){
     }
     st.insert(x);
 }
-// for(auto x: st){
-//     cout<<x<<" ";
-// }
- cout<<"false";
+for(auto x: st){
+    cout<<x<<" ";
+}
+cout<<"false";
     return 0;
 }

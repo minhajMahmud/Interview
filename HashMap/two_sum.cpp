@@ -18,7 +18,6 @@ int main() {
             cout << mp[need] << " " << i;
             return 0;      // Stop the program
         }
-
         mp[arr[i]] = i;
     }
     cout << "Not found";

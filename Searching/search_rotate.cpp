@@ -26,7 +26,7 @@ int main() {
         // Left half is sorted
         if (arr[low] <= arr[mid]) {
             if (target >= arr[low] && target < arr[mid])
-                high = mid - 1;
+                high = mid - 1;//eta hocceh je jadi left e thake tahle left e search
             else
                 low = mid + 1;
         }
