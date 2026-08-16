@@ -57,5 +57,12 @@ for(auto x : mp)
     if(x.second > n / 2)
         cout << x.first;
 }
+// for(auto x:mp){
+// if(x.second>maximum) {
+//     maximum=x.second;
+
+// }
+// }
+
     return 0;
 }

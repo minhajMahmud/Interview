@@ -11,9 +11,9 @@ int main() {
     for (int i = 0; i < n; i++)
         cin >> arr[i];
 
-    int maximum = arr[0];
+    int maximum = INT_MIN;
     int secondLarge=INT_MIN;
-    for (int i = 1; i < n; i++) {
+    for (int i = 0; i < n; i++) {
         if (arr[i] > maximum){
             secondLarge=maximum;
             maximum=arr[i];

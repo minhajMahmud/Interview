@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main() {
+    //etate hocche je word gula revere kore tar reverse;
 string s;
 getline(cin,s);
 reverse(s.begin(),s.end());
@@ -13,8 +14,5 @@ for (int i = 0; i <=s.length(); i++)
     }
 }
 cout<<s;   
-
-    
-
     return 0;
 }

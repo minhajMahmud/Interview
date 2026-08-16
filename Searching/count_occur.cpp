@@ -34,7 +34,5 @@ cin>>target;
         }
         
     }
-    
-
     return 0;
 }

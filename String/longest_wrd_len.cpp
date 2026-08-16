@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main() {
+
     string s;
     getline(cin,s);
     string word="";
@@ -10,13 +11,14 @@ int main() {
         if(i==s.length()||s[i]==' '){
             if(word.length()>longest.length()){
                 longest=word;
+
             }
             word="";
         }else{
             word+=s[i];
         }
     }
-    cout<<longest;
+    cout<<longest.length();
 
     return 0;
 }

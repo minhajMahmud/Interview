@@ -24,29 +24,3 @@ int main() {
 
     return 0;
 }
-/*
-#include <bits/stdc++.h>
-using namespace std;
-int main() {
-string s,t;
-cin>>s>>t;
-if(s.size()!=t.size()){
-    return false;
-}
-map<char,int>mp;
-for(char ch:s){
-    mp[ch]++;
-}
-for(char ch:t){
-    mp[ch]--;
-    
-    if(mp[ch]<0){
-        cout<<"ANahram";
-        return false;
-    }
-}
-cout<<true;
-
-    return 0;
-}
-    */

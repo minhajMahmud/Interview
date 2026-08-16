@@ -1,7 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-int trap(int arr[], int n) {
+int main() {
+    int n;
+    cin >> n;
+    int arr[n];
+    for (int i = 0; i < n; i++)
+        cin >> arr[i];
     int left = 0;
     int right = n - 1;
     int leftMax = 0;
@@ -25,20 +29,7 @@ int trap(int arr[], int n) {
             right--;  // ✅ Move right pointer
         }
     }
-
-    return water;
-}
-
-int main() {
-    int n;
-    cin >> n;
-
-    int arr[n];
-
-    for (int i = 0; i < n; i++)
-        cin >> arr[i];
-
-    cout << trap(arr, n);
+    cout << water;
 
     return 0;
 }

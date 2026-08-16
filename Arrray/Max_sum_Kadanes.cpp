@@ -8,19 +8,16 @@ int arr[n];
 
 for (int i = 0; i < n; i++)
     cin >> arr[i];
-int current=0;
+int current=arr[0];
 int maxSum=arr[0];
-for (int i = 0; i < n; i++)
+for (int i = 1; i < n; i++)
 {
     current=current+arr[i];
     if(current>maxSum){
         maxSum=current;
     }if(current<0) current=0;
 }
-
 cout<<"Maximu"<<maxSum;
-    
-
     return 0;
 }
 

@@ -10,6 +10,5 @@ int main() {
    for(auto x: mp){
     cout<<x.first<<x.second;
    }
-
     return 0;
 }

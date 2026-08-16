@@ -21,8 +21,12 @@ int main() {
     for(int i = 0; i < n; i++){
         sum += arr[i];
         if(mp.count(sum - k))
+        //shudu subaray sum find korle
+        /*if (mp.count(sum - k)) {
+    cout << "Found";
+    return 0;
+}*/
             count += mp[sum - k];
-
         mp[sum]++;
     }
 

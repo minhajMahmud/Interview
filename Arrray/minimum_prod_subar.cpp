@@ -23,7 +23,7 @@ int main() {
 
         minProd = min(arr[i], minProd * arr[i]);
 
-        ans = max(ans, maxProd);
+        ans = min(ans, minProd);
     }
 
     cout << ans;

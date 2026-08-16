@@ -20,7 +20,7 @@ int main() {
                 mid++;
             }else if(arr[mid]==1){
                 mid++;
-            }else{
+            }else{//jadi 2 hoi rkiii
                 swap(arr[mid],arr[right]);
                 right--;
             }

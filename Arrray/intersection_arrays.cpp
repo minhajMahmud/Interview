@@ -1,6 +1,38 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+int main() {
+
+    int n, m;
+    cin >> n >> m;
+
+    int a[n], b[m];
+
+    map<int, int> mp;
+
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+        mp[a[i]]++;
+    }
+
+    for (int i = 0; i < m; i++)
+        cin >> b[i];
+
+    for (int i = 0; i < m; i++) {
+
+        if (mp[b[i]] > 0) {
+            cout << b[i] << " ";
+
+            // duplicate prevent করার জন্য
+            mp[b[i]] = 0;
+        }
+    }
+
+    return 0;
+}
+/*#include <bits/stdc++.h>
+using namespace std;
+
 int main()
 {
     int n, m;
@@ -29,4 +61,4 @@ int main()
     }
 
     return 0;
-}
+}*/

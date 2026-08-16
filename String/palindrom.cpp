@@ -16,7 +16,5 @@ while(left<right){
 }
 if(pal) cout<<"Palindrom";
 else cout<<"Not";
-    
-
-    return 0;
+        return 0;
 }
