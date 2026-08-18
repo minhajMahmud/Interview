@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-bool possible(int arr[],int n,int cows,int dist){
+bool possible(int arr[],int n,int cows,int dist){//ekhane dist=mid 
     int count=1;
     int last=arr[0];
     for(int i=1;i<n;i++){

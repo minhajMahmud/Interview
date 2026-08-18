@@ -1,31 +1,41 @@
-#include <iostream>
-#include <queue>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 
 struct Node {
     int value;
     int row;
     int col;
+};
 
-    bool operator>(const Node &other) const {
-        return value > other.value;
+struct Compare {
+    bool operator()(Node a, Node b) {
+        return a.value > b.value;
     }
 };
 
 int main() {
+    int k;
+    cin >> k;
 
-    vector<vector<int>> arr = {
-        {1,4,7},
-        {2,5,8},
-        {3,6,9}
-    };
+    vector<vector<int>> arr(k);
 
-    priority_queue<Node, vector<Node>, greater<Node>> pq;
+    for (int i = 0; i < k; i++) {
+        int n;
+        cin >> n;
 
-    // প্রথম element push
-    for (int i = 0; i < arr.size(); i++) {
-        pq.push({arr[i][0], i, 0});
+        arr[i].resize(n);
+
+        for (int j = 0; j < n; j++)
+            cin >> arr[i][j];
+    }
+
+    priority_queue<Node, vector<Node>, Compare> pq;
+
+    // First element of every array
+    for (int i = 0; i < k; i++) {
+        if (!arr[i].empty()) {
+            pq.push({arr[i][0], i, 0});
+        }
     }
 
     while (!pq.empty()) {
@@ -35,13 +45,43 @@ int main() {
 
         cout << current.value << " ";
 
-        int r = current.row;
-        int c = current.col;
+        int row = current.row;
+        int col = current.col;
 
-        if (c + 1 < arr[r].size()) {
-            pq.push({arr[r][c + 1], r, c + 1});
+        // Next element from same array
+        if (col + 1 < arr[row].size()) {
+            pq.push({arr[row][col + 1], row, col + 1});
         }
     }
 
     return 0;
 }
+/*
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int k;
+    cin >> k;
+
+    vector<int> ans;
+
+    for (int i = 0; i < k; i++) {
+        int n;
+        cin >> n;
+
+        for (int j = 0; j < n; j++) {
+            int x;
+            cin >> x;
+            ans.push_back(x);
+        }
+    }
+
+    sort(ans.begin(), ans.end());
+
+    for (int x : ans)
+        cout << x << " ";
+
+    return 0;
+}
+*/

@@ -25,7 +25,11 @@ int main() {
     cin >> n >> m;
 
     int arr[1000];
-
+ if (m > n)
+    {
+        cout << -1;
+        return 0;
+    }
     int low = 0, high = 0;
 
     for (int i = 0; i < n; i++) {

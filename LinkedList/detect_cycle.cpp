@@ -1,26 +1,33 @@
 #include <bits/stdc++.h>
 using namespace std;
-struct Node
-{
+
+struct Node {
     int data;
     Node* next;
-};
-Node * head=NULL;
-void insertEnd(int val){
-    Node* newNode=new Node();
-    newNode->data=val;
-    newNode->next=NULL;
-    if(head==NULL){
-        head=newNode;
-        return;
 
+    Node(int val) {
+        data = val;
+        next = NULL;
     }
-    Node* temp=head;
-while (temp->next!=NULL)
-{
-    temp=temp->next;
-    temp->next=newNode;
-}
+};
+
+Node* head = NULL;
+
+void insertEnd(int val) {
+
+    Node* newNode = new Node(val);
+
+    if (head == NULL) {
+        head = newNode;
+        return;
+    }
+
+    Node* temp = head;
+
+    while (temp->next != NULL)
+        temp = temp->next;
+
+    temp->next = newNode;
 }
 bool isCycle(Node * head){
 Node * slow=head;
